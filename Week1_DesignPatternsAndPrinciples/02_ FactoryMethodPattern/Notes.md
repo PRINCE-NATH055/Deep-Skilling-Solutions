@@ -30,4 +30,4 @@ Each class inherits from `DocumentFactory` and implements `CreateDocument()` ret
 ## Testing Plan
 
 ### Test Class
-- File: `Program.cs` used to instantiate each factory and verify correct document creation.
+- File: `Test.cs` used to instantiate each factory and verify correct document creation.
