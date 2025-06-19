@@ -1,20 +1,33 @@
-# Approach for Factory Method Pattern Exercise
+# Factory Method Pattern
 
-## Components:
-- Interface: `Document`
-- Concrete Products: `WordDocument`, `PdfDocument`, `ExcelDocument`
-- Abstract Factory: `DocumentFactory` (contains abstract method `createDocument()`)
-- Concrete Factories:
-  - `WordDocumentFactory`
-  - `PdfDocumentFactory`
-  - `ExcelDocumentFactory`
+## Components
 
-## Behavior:
-Each concrete factory knows how to instantiate its specific document type. The client uses the factory without needing to know the internal instantiation logic.
+### 1. Interface
+- `IDocument.cs`
+  - Declares method: `void Open();`
 
-## Testing Plan:
-- Using `DocumentFactoryTest` class to:
-  - Instantiate each factory
-  - Calling `createDocument()` and print/verify the class type
-- Validating that different factory instances produce different document types, all adhering to the `Document` interface.
+### 2. Concrete Document Classes
+- `WordDocument.cs`
+- `PdfDocument.cs`
+- `ExcelDocument.cs`
 
+Each implements `IDocument` and overrides `Open()` method.
+
+### 3. Abstract Factory
+- `DocumentFactory.cs`
+  - Abstract class with method:
+    ```csharp
+    public abstract IDocument CreateDocument();
+    ```
+
+### 4. Concrete Factories
+- `WordDocumentFactory.cs`
+- `PdfDocumentFactory.cs`
+- `ExcelDocumentFactory.cs`
+
+Each class inherits from `DocumentFactory` and implements `CreateDocument()` returning the respective document type.
+
+## Testing Plan
+
+### Test Class
+- File: `Program.cs` used to instantiate each factory and verify correct document creation.

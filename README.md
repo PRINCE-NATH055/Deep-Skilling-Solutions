@@ -6,7 +6,7 @@ This week covered core topics in two areas: **Design Patterns** and **Algorithms
 
 ### Exercise 1: Singleton Pattern  
 **Skill:** Design Principles and Patterns  
-Created a `Logger` class that ensures only one instance exists during runtime.
+Created a `Logger` C# class that ensures only one instance exists during runtime.
 
 **Learnings:**
 - Singleton design pattern fundamentals
@@ -46,6 +46,6 @@ Implemented linear and binary search on a list of products.
 
 ## Summary
 
-- Applied two major design patterns in practical scenarios.
+- Applied two major design patterns in C# practical scenarios.
 - Practiced algorithm analysis and recursive thinking.
 - Improved coding structure, abstraction, and documentation.
