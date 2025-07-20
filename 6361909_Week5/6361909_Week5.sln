@@ -1,0 +1,39 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web_Api_Handson_6", "Web_Api_Handson_6", "{95CF5E9C-2B12-A46E-3234-E9F624F7D927}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code", "Code", "{864E3255-BE99-2E96-A182-54C4552E1133}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaChatConsumer", "Web_Api_Handson_6\Code\Reciever\KafkaChatConsumer.csproj", "{90F325AE-1F9B-CFEA-FC1D-E0688BFF9C50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaChatPublisher", "Web_Api_Handson_6\Code\Sender\KafkaChatPublisher.csproj", "{996DE89F-8BCB-3E28-E22F-22A2D5982253}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90F325AE-1F9B-CFEA-FC1D-E0688BFF9C50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90F325AE-1F9B-CFEA-FC1D-E0688BFF9C50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90F325AE-1F9B-CFEA-FC1D-E0688BFF9C50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90F325AE-1F9B-CFEA-FC1D-E0688BFF9C50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{996DE89F-8BCB-3E28-E22F-22A2D5982253}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{996DE89F-8BCB-3E28-E22F-22A2D5982253}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{996DE89F-8BCB-3E28-E22F-22A2D5982253}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{996DE89F-8BCB-3E28-E22F-22A2D5982253}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{864E3255-BE99-2E96-A182-54C4552E1133} = {95CF5E9C-2B12-A46E-3234-E9F624F7D927}
+		{90F325AE-1F9B-CFEA-FC1D-E0688BFF9C50} = {864E3255-BE99-2E96-A182-54C4552E1133}
+		{996DE89F-8BCB-3E28-E22F-22A2D5982253} = {864E3255-BE99-2E96-A182-54C4552E1133}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {346A1672-CC35-4E31-B51A-5B11AB4F11AA}
+	EndGlobalSection
+EndGlobal

@@ -6,8 +6,7 @@ namespace JwtAuthService.Controllers
     [ApiController]
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
-    {
-        // Protect this route with [Authorize]
+    {        
         [HttpGet]
         [Authorize]
         public IActionResult Get()

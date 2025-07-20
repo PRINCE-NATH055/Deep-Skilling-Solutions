@@ -10,10 +10,10 @@ namespace JwtAuthService
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add controllers
+            
             builder.Services.AddControllers();
 
-            // Add JWT Authentication
+            
             builder.Services.AddAuthentication("Bearer")
                 .AddJwtBearer("Bearer", options =>
                 {
@@ -29,7 +29,7 @@ namespace JwtAuthService
                             Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
                     };
 
-                    // Optional: Handle token expiration
+                    
                     options.Events = new JwtBearerEvents
                     {
                         OnAuthenticationFailed = context =>
@@ -45,13 +45,13 @@ namespace JwtAuthService
 
             builder.Services.AddAuthorization();
 
-            // Swagger (optional for testing)
+            
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new() { Title = "JwtAuthService", Version = "v1" });
 
-                // Add JWT Authentication
+                
                 c.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
                 {
                     Name = "Authorization",
@@ -81,7 +81,7 @@ namespace JwtAuthService
 
             var app = builder.Build();
 
-            // Enable Swagger in development
+            
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
@@ -90,11 +90,11 @@ namespace JwtAuthService
 
             app.UseHttpsRedirection();
 
-            // Add authentication & authorization middleware
+            
             app.UseAuthentication();
             app.UseAuthorization();
 
-            // Map controller endpoints
+            
             app.MapControllers();
 
             app.Run();

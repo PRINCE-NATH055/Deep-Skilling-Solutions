@@ -29,7 +29,7 @@ public class AuthController : ControllerBase
 
     private bool IsValidUser(LoginModel model)
     {
-        // Replace with real validation
+        
         return model.Username == "test" && model.Password == "password";
     }
 
@@ -51,7 +51,7 @@ public class AuthController : ControllerBase
             expires: DateTime.Now.AddSeconds(30),
             signingCredentials: creds);
 
-        //Convert.ToDouble(_configuration["Jwt:DurationInMinutes"])
+        
 
         return new JwtSecurityTokenHandler().WriteToken(token);
     }
